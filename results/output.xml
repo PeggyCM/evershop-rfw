@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.3 on linux)" generated="2025-06-19T19:15:45.927829" rpa="false" schemaversion="5">
+<suite id="s1" name="Categorie" source="/home/combeau-mansour/Tools/EverShopDocker-TP/TEST_ROBOT/tests/test_cases/categorie.robot">
+<kw name="initialiser l'environnement" owner="login_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:46.074987" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/admin/login'.</msg>
+<arg>${url_login}</arg>
+<arg>${navigateur}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-19T19:15:46.074692" elapsed="0.978279"/>
+</kw>
+<kw name="login with" owner="login_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:47.054705" level="INFO">Opening url 'http://localhost:3000/admin/login'</msg>
+<arg>${url_login}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-06-19T19:15:47.054473" elapsed="0.091512"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:47.147197" level="INFO">Typing text 'admin@admin.com' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:15:47.146331" elapsed="0.141424"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:47.288649" level="INFO">Typing text 'DB123456' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:15:47.288083" elapsed="0.163305"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:47.452524" level="INFO">Clicking button 'css:.button.primary'.</msg>
+<arg>css:.button.primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:15:47.451960" elapsed="0.111156"/>
+</kw>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-06-19T19:15:47.053743" elapsed="0.511110"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-19T19:15:47.565398" elapsed="0.027537"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-19T19:15:47.593352" elapsed="0.036610"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:15:46.073941" elapsed="1.556191"/>
+</kw>
+<test id="s1-t1" name="Test Création de Catégorie" line="14">
+<kw name="Creer des categories" owner="crea_categorie_keywords">
+<kw name="Cliquer sur le bouton categorie" owner="crea_categorie_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(), 'Categories')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T19:15:47.631629" elapsed="0.529765"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:48.161853" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Categories')]'.</msg>
+<arg>xpath=//a[contains(text(), 'Categories')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:15:48.161616" elapsed="0.381230"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>categories</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-19T19:15:48.543165" elapsed="0.013561"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:15:47.631357" elapsed="0.925575"/>
+</kw>
+<kw name="Cliquer sur le bouton new categorie" owner="crea_categorie_keywords">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>css=a.button.primary</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-06-19T19:15:48.557716" elapsed="0.036196"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:48.594500" level="INFO">Clicking element 'css=a.button.primary'.</msg>
+<arg>css=a.button.primary</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:15:48.594192" elapsed="0.388261"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Create a new category</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-19T19:15:48.982830" elapsed="0.017424"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:15:48.557231" elapsed="0.443162"/>
+</kw>
+<kw name="Saisir les variables de la nouvelle categorie" owner="crea_categorie_keywords">
+<kw name="Saisir le nom de la categorie" owner="crea_categorie_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:49.001461" level="INFO">Typing text 'Sacs' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>${CATEGORY_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:15:49.001167" elapsed="0.116465"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:15:49.000901" elapsed="0.116908"/>
+</kw>
+<kw name="Saisir l'url unique de la categorie" owner="crea_categorie_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:49.119072" level="INFO">Typing text 'URLSacs' into text field 'id=urlKey'.</msg>
+<arg>id=urlKey</arg>
+<arg>${URL_KEY}${CATEGORY_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:15:49.118671" elapsed="0.107552"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:15:49.118186" elapsed="0.108209"/>
+</kw>
+<kw name="Saisir metaTitle de la categorie" owner="crea_categorie_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:49.227105" level="INFO">Typing text 'Sacs' into text field 'id=metaTitle'.</msg>
+<arg>id=metaTitle</arg>
+<arg>${METATITLE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:15:49.226881" elapsed="0.105023"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:15:49.226587" elapsed="0.105468"/>
+</kw>
+<kw name="Saisir metakeywords de la categorie" owner="crea_categorie_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:49.332954" level="INFO">Typing text 'Sacs Femme' into text field 'id=metakeywords'.</msg>
+<arg>id=metakeywords</arg>
+<arg>${METAKEYWORDS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:15:49.332662" elapsed="0.127159"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:15:49.332286" elapsed="0.127734"/>
+</kw>
+<kw name="Saisir meta_description de la categorie" owner="crea_categorie_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:49.461191" level="INFO">Typing text 'Sacs de femme' into text field 'id=meta_description'.</msg>
+<arg>id=meta_description</arg>
+<arg>${METADESCRIPTION}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:15:49.460831" elapsed="0.115044"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:15:49.460326" elapsed="0.115723"/>
+</kw>
+<kw name="Telecharger une photo de la categorie" owner="crea_categorie_keywords">
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:49.577096" level="INFO">Sending /home/combeau-mansour/Tools/EverShopDocker-TP/cintre.avif to browser.</msg>
+<arg>css=input[type='file']</arg>
+<arg>${FILE_PATH}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:15:49.576759" elapsed="0.053942"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=.category-image</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T19:15:49.631183" elapsed="0.251519"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:15:49.576348" elapsed="0.306653"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:15:49.000600" elapsed="0.882533"/>
+</kw>
+<kw name="Selectionner une categorie parent" owner="crea_categorie_keywords">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>css=a.text-interactive</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-06-19T19:15:49.884117" elapsed="0.033387"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>css=a.text-interactive</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-06-19T19:15:49.917717" elapsed="0.271390"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:50.189941" level="INFO">Clicking element 'css=a.text-interactive'.</msg>
+<arg>css=a.text-interactive</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:15:50.189521" elapsed="0.087254"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[text()='Femme']</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T19:15:50.277158" elapsed="0.255824"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//a[text()='Femme']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-06-19T19:15:50.533397" elapsed="0.275859"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:50.810075" level="INFO">Clicking element 'xpath=//a[text()='Femme']'.</msg>
+<arg>xpath=//a[text()='Femme']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:15:50.809674" elapsed="0.060359"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:15:49.883550" elapsed="0.986672"/>
+</kw>
+<kw name="Cocher les boutons radio de la categorie" owner="crea_categorie_keywords">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:50.871286" level="INFO">Selecting '1' from radio button 'status'.</msg>
+<arg>status</arg>
+<arg>1</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2025-06-19T19:15:50.871061" elapsed="0.019796"/>
+</kw>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:50.891252" level="INFO">Selecting '1' from radio button 'include_in_nav'.</msg>
+<arg>include_in_nav</arg>
+<arg>1</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2025-06-19T19:15:50.891078" elapsed="0.014137"/>
+</kw>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:50.905644" level="INFO">Selecting '1' from radio button 'show_products'.</msg>
+<arg>show_products</arg>
+<arg>1</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2025-06-19T19:15:50.905464" elapsed="0.013725"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:15:50.870578" elapsed="0.048742"/>
+</kw>
+<kw name="Sauver la categorie" owner="crea_categorie_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:50.920006" level="INFO">Clicking button 'css=button.button.primary'.</msg>
+<arg>css=button.button.primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T19:15:50.919817" elapsed="0.074150"/>
+</kw>
+<kw name="Verifier le toast success" owner="crea_categorie_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=.Toastify__toast</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T19:15:50.995018" elapsed="0.467577"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-19T19:15:51.821784" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-19T19:15:51.822131" level="FAIL">Element 'css=.Toastify__toast' should have contained text 'Category saved successfully!' but its text was 'Exception in middleware finish: Exception in middleware createCategory: duplicate key value violates unique constraint "CATEGORY_URL_KEY_UNIQUE"'.</msg>
+<arg>css=.Toastify__toast</arg>
+<arg>Category saved successfully!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="FAIL" start="2025-06-19T19:15:51.462869" elapsed="0.362723">Element 'css=.Toastify__toast' should have contained text 'Category saved successfully!' but its text was 'Exception in middleware finish: Exception in middleware createCategory: duplicate key value violates unique constraint "CATEGORY_URL_KEY_UNIQUE"'.</status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>css=.Toastify__toast</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="NOT RUN" start="2025-06-19T19:15:51.825917" elapsed="0.000052"/>
+</kw>
+<status status="FAIL" start="2025-06-19T19:15:50.994456" elapsed="0.831704">Element 'css=.Toastify__toast' should have contained text 'Category saved successfully!' but its text was 'Exception in middleware finish: Exception in middleware createCategory: duplicate key value violates unique constraint "CATEGORY_URL_KEY_UNIQUE"'.</status>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Editing ${CATEGORY_NAME}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-06-19T19:15:51.826399" elapsed="0.000050"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Editing ${CATEGORY_NAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-06-19T19:15:51.826603" elapsed="0.000037"/>
+</kw>
+<status status="FAIL" start="2025-06-19T19:15:50.919525" elapsed="0.907249">Element 'css=.Toastify__toast' should have contained text 'Category saved successfully!' but its text was 'Exception in middleware finish: Exception in middleware createCategory: duplicate key value violates unique constraint "CATEGORY_URL_KEY_UNIQUE"'.</status>
+</kw>
+<status status="FAIL" start="2025-06-19T19:15:47.630982" elapsed="4.195902">Element 'css=.Toastify__toast' should have contained text 'Category saved successfully!' but its text was 'Exception in middleware finish: Exception in middleware createCategory: duplicate key value violates unique constraint "CATEGORY_URL_KEY_UNIQUE"'.</status>
+</kw>
+<status status="FAIL" start="2025-06-19T19:15:47.630276" elapsed="4.197392">Element 'css=.Toastify__toast' should have contained text 'Category saved successfully!' but its text was 'Exception in middleware finish: Exception in middleware createCategory: duplicate key value violates unique constraint "CATEGORY_URL_KEY_UNIQUE"'.</status>
+</test>
+<kw name="clore environnement" owner="login_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-19T19:15:51.828921" elapsed="0.106648"/>
+</kw>
+<status status="PASS" start="2025-06-19T19:15:51.828606" elapsed="0.107197"/>
+</kw>
+<status status="FAIL" start="2025-06-19T19:15:45.928698" elapsed="6.007181"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Categorie" id="s1" pass="0" fail="1" skip="0">Categorie</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
