@@ -9,4 +9,4 @@ ${METAKEYWORDS}    Sacs Femme
 ${METADESCRIPTION}    Sacs de femme
 ${FILE_PATH}    /home/combeau-mansour/Tools/EverShopDocker-TP/cintre.avif
 ${email}    admin@admin.com
-${password}    DB123456
+${password}    DB123456   # Password
